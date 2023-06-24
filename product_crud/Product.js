@@ -17,4 +17,3 @@ var Product = /** @class */ (function () {
     return Product;
 }());
 exports.Product = Product;
-var p = new Product();

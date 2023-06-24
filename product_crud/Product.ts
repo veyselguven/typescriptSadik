@@ -14,5 +14,3 @@ export class Product {
     public price?: number
   ) {}
 }
-
-let p = new Product();

@@ -24,7 +24,12 @@ var ProductService = /** @class */ (function () {
             this.products.push(product);
         }
         else {
-            var index = this.products.indexOf(product);
+            var index = void 0;
+            for (var i = 0; i < this.products.length; i++) {
+                if (this.products[i].id === product.id) {
+                    index = i;
+                }
+            }
             this.products.splice(index, 1, product);
         }
     };
@@ -37,7 +42,7 @@ var ProductService = /** @class */ (function () {
     };
     ProductService.prototype.generateId = function () {
         var key = 1;
-        while (this.getById(key) !== null) {
+        while (this.getById(key) != null) {
             key++;
         }
         return key;
